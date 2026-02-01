@@ -73,32 +73,48 @@ class _DragAreaState extends State<DragArea> {
               Positioned(
                 top: pos.dy,
                 left: pos.dx,
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Transform.scale(
-                    scale: scale,
-                    child: Container(
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "${pos.dx.toInt()}, ${pos.dy.toInt()}\nScale: ${scale.toStringAsFixed(2)}",
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                child: SimpleBox(scale: scale, pos: pos),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SimpleBox extends StatelessWidget {
+  const SimpleBox({
+    super.key,
+    required this.scale,
+    required this.pos,
+  });
+
+  final double scale;
+  final Offset pos;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: Transform.scale(
+        scale: scale,
+        child: Container(
+          height: 100,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Center(
+            child: Text(
+              "${pos.dx.toInt()}, ${pos.dy.toInt()}\nScale: ${scale.toStringAsFixed(2)}",
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
           ),
         ),
       ),
