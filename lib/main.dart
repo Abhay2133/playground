@@ -107,7 +107,7 @@ class SimpleBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Drag Me",
+                  "Drag/Zoom Me",
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
