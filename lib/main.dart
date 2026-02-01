@@ -84,11 +84,7 @@ class _DragAreaState extends State<DragArea> {
 }
 
 class SimpleBox extends StatelessWidget {
-  const SimpleBox({
-    super.key,
-    required this.scale,
-    required this.pos,
-  });
+  const SimpleBox({super.key, required this.scale, required this.pos});
 
   final double scale;
   final Offset pos;
@@ -107,13 +103,29 @@ class SimpleBox extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
-            child: Text(
-              "${pos.dx.toInt()}, ${pos.dy.toInt()}\nScale: ${scale.toStringAsFixed(2)}",
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Drag Me",
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "${pos.dx.toInt()}, ${pos.dy.toInt()}",
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                ),
+                Text(
+                  "Scale: ${scale.toStringAsFixed(2)}",
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ],
             ),
           ),
         ),
