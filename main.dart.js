@@ -50731,7 +50731,7 @@ s.d=s.d.R(0,r.a)},
 $S:0}
 A.zT.prototype={
 Z(a){var s=null,r=this.c,q=A.a_E(8),p=this.d
-return A.a0r(A.a5j(A.a_Q(A.aaw(new A.wb(B.es,B.o1,B.o2,B.c0,s,B.J8,s,0,A.d([A.a0P("Drag Me",B.Gk,s),B.Er,A.a0P(""+B.c.cL(p.a)+", "+B.c.cL(p.b),B.tL,B.bF),A.a0P("Scale: "+B.c.U(r,2),B.tL,B.bF)],t.nA),s),s,s),s,new A.f1(B.cm,s,s,q,s,s,B.bN),100,s,s,100),r),B.EJ,s,s)}}
+return A.a0r(A.a5j(A.a_Q(A.aaw(new A.wb(B.es,B.o1,B.o2,B.c0,s,B.J8,s,0,A.d([A.a0P("Drag/Zoom Me",B.Gk,s),B.Er,A.a0P(""+B.c.cL(p.a)+", "+B.c.cL(p.b),B.tL,B.bF),A.a0P("Scale: "+B.c.U(r,2),B.tL,B.bF)],t.nA),s),s,s),s,new A.f1(B.cm,s,s,q,s,s,B.bN),100,s,s,100),r),B.EJ,s,s)}}
 A.aL.prototype={
 bL(a){var s=a.a,r=this.a,q=s[15]
 r.$flags&2&&A.ac(r)
